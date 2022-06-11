@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#bola1').animate({
-        'left': '80px'
-    }, 150, null, function(){
+        'left': '90px'
+    }, 100, null, function(){
         $('#bola2').animate({
             'left': '300px'
         }, 300);
