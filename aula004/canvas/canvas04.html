@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Gradiente</title>
+</head>
+<body>
+    <canvas id="meucanvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById('meucanvas');
+        var ctx = canvas.getContext('2d');
+
+        //GRADIENTE
+        var color = ctx.createLinearGradient(0, 0, 500, 0);
+        color.addColorStop(0, 'red');
+        color.addColorStop(1, 'orange');
+
+        ctx.fillStyle = color;
+        ctx.fillRect(10, 10, 500, 500)
+    </script>
+</body>
+</html>

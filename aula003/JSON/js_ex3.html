@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JSON</title>
+</head>
+<body>
+    <h1>Lendo com Laço FOR</h1>
+    <p id="dados"></p>
+    <p id="dados2"></p>
+    <p id="dados3"></p>
+    <script>
+        Aluno = {
+            'nome': 'Lucas', 
+            'idade': 19, 
+            'mestre': 'Cintia', 
+            'amigo': 'Rodrigo',
+            'vizinha': 'Lilia'
+        };
+
+        Jogadores = {
+            '<strong>Lakers</strong>': 'Lebron James',
+            '<strong>Golden State Warriors</strong>': 'Stephen Curry',
+            '<strong>Memphis Grizzlies</strong>': 'Ja Morant',
+            '<strong>Chicago Bulls</strong>': 'DeMar DeRozan',
+            '<strong>Milwaukee Bucks</strong>': 'Giannis Antetokounmpo'
+        };
+
+        for (x in Aluno) {
+            document.getElementById('dados').innerHTML += `${x}: ${Aluno[x]} <br>`;
+        }
+
+        for (i in Aluno) {
+            document.getElementById('dados2').innerHTML += `${i}: ${Aluno[i]} <br>`;
+        }
+
+        for (i in Jogadores) {
+            document.getElementById('dados3').innerHTML += `${i}: ${Jogadores[i]}<br>`
+        }
+    </script>
+</body>
+</html>

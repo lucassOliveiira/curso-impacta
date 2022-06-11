@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+            $('button#btn1').click(function(){
+                $('#p1').hide();
+                $('.texto').hide();
+            })
+            $('#btn2').click(function(){
+                $('#p1').show();
+                $('.texto').show();
+            })
+        });
+    </script>
+</head>
+<body>
+    <p id="p1">Parágrafo Um</p>
+    <p id="p2">Parágrafo Dois</p>
+    <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eaque ipsam ipsa dolores cum quam porro quos esse aspernatur corrupti. Magni amet delectus dolores, natus ratione porro commodi vero. Aliquid!</p>
+    <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis eaque ipsam ipsa dolores cum quam porro quos esse aspernatur corrupti. Magni amet delectus dolores, natus ratione porro commodi vero. Aliquid!</p>
+    <button id="btn1">Clique pra SUMIR!</button>
+    <button id="btn2">Clique pra VOLTAR!</button>
+</body>
+</html>

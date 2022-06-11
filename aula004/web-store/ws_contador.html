@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS - CONTADOR</title>
+    <script>
+        function contador() {
+            if (typeof(Storage) != 'undefined') {
+                if (localStorage.numero) {
+                    localStorage.numero = Number(localStorage.numero) + 1;
+                } else {
+                    localStorage.numero = 1;
+                }
+                document.getElementById('result').innerHTML = localStorage.numero;
+            } else {
+                alert('Não aceita Web Storage!')
+            }
+        }
+
+        function remove() {
+            localStorage.clear(localStorage.numero);
+            document.getElementById('result').innerHTML = 0;
+        }
+    </script>
+</head>
+<body>
+    <p><button onclick="contador()" type="button">Click-me!</button></p>
+    <p><button onclick="remove()" type="button">Zere o contador</button></p>
+    <div id="result"></div>
+    <p>Clique no botão para incrementar o CONTADOR...</p>
+</body>
+</html>

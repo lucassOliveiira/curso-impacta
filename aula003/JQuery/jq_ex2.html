@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS jQuery 2</title>
+    <script src="jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input').focus(function(){
+                $(this).css('background-color', '#ccc');
+            });
+            $('input').blur(function(){
+                $(this).css('background-color', '#fff');
+            })
+        })
+    </script>
+</head>
+<body>
+    <form>
+        Nome:<input type="text" value="">
+        E-mail:<input type="text" value="">
+        Endereço:<input type="text" value="">
+    </form>
+</body>
+</html>

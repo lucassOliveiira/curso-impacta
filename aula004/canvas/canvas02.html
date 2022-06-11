@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS 02</title>
+</head>
+<body>
+    <canvas id="menucanvas" width="600" height="400" style="border: 1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('menucanvas');
+        var contexto = canvas.getContext('2d');
+        contexto.fillStyle = 'green';
+        contexto.fillRect(50, 50, 200, 300); //x, y, width, height
+
+        contexto.strokeStyle = 'blue';
+        contexto.lineWidth = 4;
+        contexto.strokeRect(60, 70, 200, 300);
+
+        contexto.lineWidth = 5;
+        contexto.strokeStyle = 'black';
+        contexto.moveTo(80, 90); //PONTO INICIAL
+        contexto.lineTo(300, 90); //PONTO SEGUINTE
+        contexto.lineTo(300, 300);
+        contexto.lineTo(80, 300);
+        contexto.lineTo(80, 90);
+        contexto.stroke();
+
+        // DESENHAR UM CIRCULO
+        contexto.beginPath();
+        contexto.arc(400, 75, 50, 0, 2 * Math.PI);
+        contexto.strokeStyle = 1;
+        contexto.fillStyle = 'green';
+        contexto.stroke();
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - DADOS ANINHADOS</title>
+    <style>
+        body {font: normal 16pt Tahoma;}
+    </style>
+</head>
+<body>
+    <h1>JSON - DADOS ANINHADOS</h1>
+    <p id="dados"></p>
+    <script>
+        var Aluno = {
+            'nome': 'NhoNho',
+            'idade': 8,
+            'professores': {
+                'prof1': 'Girafales',
+                'prof2': 'Seu Barriga',
+                'prof3': 'Seu Madruga'
+            }
+        }
+
+        Aluno.professores.prof2 = 'Dona Florinda';
+
+        document.getElementById('dados').innerHTML += Aluno.professores.prof1 + '<br>';
+        document.getElementById('dados').innerHTML += Aluno.professores['prof2'] + '<br>';
+    </script>
+</body>
+</html>

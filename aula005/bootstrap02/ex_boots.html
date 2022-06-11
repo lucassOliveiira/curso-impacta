@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo com Boots</title>
+    <link rel="stylesheet" href="../boots/bootstrap.min.css">
+    <script src="../jquery/jQuery.js"></script>
+    <script src="../boots/popper.min.js"></script>
+    <script src="../boots/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="../image/foto-lucas.png" width="40" height="40" alt="Foto Lucas" class="d-inline-block aling-top"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navBar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+                <form class="form-inline my-3 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="m-2">
+        <main class="shadow p-3 mb-4 bg-white rounded-bottom-4px container">
+            <section>
+                <div class="jumbotron p-3">
+                    <h1 class="display-4">Título</h1>
+                    <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex corrupti dolores impedit, numquam ducimus alias? Saepe eveniet explicabo odio enim sit laborum, magni culpa ipsam incidunt laboriosam repudiandae necessitatibus commodi!</p>
+                    <hr class="my-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit incidunt cumque, itaque dolorum in ut totam hic?</p>
+                    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#meuModal" href="#" role="button">Leia mais</a>
+                    <div class="modal" id="meuModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Mais Infos</h4>
+                                    <button type="button" class="close btn btn-danger" data-dismiss="modal">X</button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid delectus sint fugiat molestiae eum quibusdam dolore dolores omnis, impedit quia, iure eaque eligendi beatae minima labore porro.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit....</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4">
+                        <h2>Sub 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, error. Harum, voluptatem quidem! Deserunt quae accusantium voluptate consectetur animi illum saepe voluptatem suscipit maiores dolorum, ipsam ab amet quo sit.</p>
+                        <button type="button" class="btn btn-outline-primary btn-sm">Veja os detalhes ⇨</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="bg-dark text-white p-1">
+        <footer class="text-center">Site desenvolvido por: <a href="#" class=" font-weight-bold text-white">Lucas Oliveira</a></footer>
+    </div>
+</body>
+
+</html>

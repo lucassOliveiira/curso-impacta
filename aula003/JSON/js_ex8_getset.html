@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB STORAGE</title>
+</head>
+<body>
+    <h2>Salvando e resgatando dados JSON no WebStorage</h2>
+    <p id="demo"></p>
+    <script>
+        var Objeto, mJSON, text, obj;
+        // guardando os dados - no formato STRING
+        Objeto = {nome:"Maria", idade: 66, cidade: "Guarulhos"};
+        mJSON = JSON.stringify(Objeto);
+
+        localStorage.setItem('cadastro', mJSON);
+        // resgatando os dados e usando como OBJETO
+        text = localStorage.getItem('cadastro');
+        obj = JSON.parse(text);
+        document.getElementById('demo').innerHTML = obj.cidade;
+    </script>
+</body>
+</html>

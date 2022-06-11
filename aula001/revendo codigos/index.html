@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIOS</title>
+</head>
+
+<body>
+    <main role="main">
+        <!-- Inserir formulário - action= ação ao ser enviado-->
+        <form action="qualquer.php">
+            <fieldset>
+                <!-- Estabelece uma área especial para o form  (Semântica)-->
+                <legend>DADOS PESSOAIS</legend>
+                <br>
+                <!-- Legenda para o form / titulo (Semântica -->
+                <div>
+                    <label for="nome">Nome:</label>
+                    <!-- label: Legenda para os campos (Semântica) -->
+                    <!-- for recebe o - id - do input - Permite que o campo seja 
+					"focado" quando o usuário clicar no label respectivo-->
+
+                    <input type="text" id="nome" name="nome" minlength="10" maxlength="20" placeholder="Digite seu nome"
+                        autofocus required>
+
+                    <!-- input - campo para a entrada de dados fornecidos pelo usuário -->
+                    <!-- type (tipo de dado) - id (identificação para envio) -->
+                    <!-- name (nome do dado (idem id) -->
+                    <!-- minlength (mínimo de caracteres aceitos -->
+                    <!-- maxlength (máximo de caracteres aceitos -->
+                    <!-- placeholder (texto apresentado ao usuário - DICA -->
+                    <!-- autofocus (campo recebe o cursor automaticamente -->
+                    <!-- required (campo obrigatório -->
+
+                </div>
+                <br>
+                <div>
+                    <label for="email">e-Mail:</label>
+                    <input type="text" id="email" name="email" maxlength="20" placeholder="Digite seu e-mail" required>
+                </div>
+                <br>
+                <div>
+                    <label>Estado:</label>
+                    <!-- select - exibe uma lista dropdown para a escolha de um ítem -->
+                    <!-- name - funciona para guardar o valor (value) escolhido na variável: estado -->
+                    <select name="estado" required>
+                        <!-- abre select -->
+                        <option value="">Escolha seu estado</option>
+                        <!-- option - representa cada opção disponível na lista -->
+                        <option value="35" selected>SP</option>
+                        <!-- selected (selecionado) - aponta o valor padrão caso nenhum outro seja escolhido -->
+                        <option value="22">RJ</option>
+                        <option value="31">MG</option>
+                        <option value="45">RS</option>
+                    </select><!-- fecha - select -->
+                </div>
+                <br>
+                <div>
+                    <label for="cep">CEP:</label>
+                    <input type="text" pattern="[0-9]{5}-[0-9]{3}" id="cep" name="cep" minlength="9" maxlength="9"
+                        placeholder="Ex: 12345-123" required>
+                    <!-- pattern - exibe uma "máscara" para validar os dados digitados (expressões regulares)-->
+                </div>
+                <br>
+                <div>
+                    <label for="mensagem">Mande sua mensagem:</label>
+                    <div>
+                        <textarea id="mensagem" name="mensagem" cols="30" rows="10"></textarea>
+                        <!-- textarea - abre uma área maior para a digitação de um texto mais longo -->
+                        <!-- cols - número de colunas da área -->
+                        <!-- rows - número de linhas da área -->
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div>
+                    <label>Responda:</label>
+                </div>
+                <div>
+                    <label for="sim">SIM</label>
+                    <input type="radio" id="sim" value="sim" name="escolha" checked>
+                    <!-- type = radio - apresenta uma lista de ítens que permite a escolha de apenas um deles -->
+                    <!-- checked - a escolha padrão caso nenhuma outra seja feita -->
+                    <!-- value - o valor a ser passado para - a variável - escolha (name) -->
+
+                    <label for="nao">NÃO</label>
+                    <input type="radio" id="nao" value="nao" name="escolha">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <div>
+                    <label>Escolha:</label>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="musica" value="musica" name="escolha[]">
+                            <label for="musica">música</label>
+                            <!-- type = checkbox - apresenta uma lista de ítens que permite a escolha de vários ao mesmo tempo -->
+                            <!-- value - o valor a ser passado para - a variável - escolha[] (name) que neste caso trata-se de uma array -->
+                        </li>
+                        <li>
+                            <input type="checkbox" id="esporte" value="esporte" name="escolha[]">
+                            <label for="esporte">esporte</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="leitura" value="leitura" name="escolha[]">
+                            <label for="leitura">leitura</label>
+                            <!-- caso a pessoa escolha todos os itens teremos a array - escolha=[musica, esporte, leitura] -->
+                        </li>
+                    </ul>
+                </div>
+
+                <button>CADASTRAR</button> <!-- exibe um botão para enviar o formulário -->
+                <!-- pode-se usar também - input type="submit" -->
+
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - LAÇO FOR - ARRAY</title>
+</head>
+<body>
+    <script>
+        var frutas = ['banana', 'manga', 'laranja', 'maracuja', 'caqui'];
+        for (i = 0; i < frutas.length; i++) {
+            document.write(frutas[i] + '<br>');
+        }
+
+        document.write('<br>');
+        frutas.sort(); // ORDEM ALFABÉTICA
+        document.write(frutas);
+
+        document.write('<br>');
+        frutas.reverse(); // ORDEM CONTRÁRIA
+        document.write(frutas);
+
+        document.write('<br>');
+        frutas.push('uva'); // INSERIR NOVO ELEMENTO
+        document.write(frutas);
+
+        // CRIANDO UMA MATRIZ (ARRAY) VAZIA
+
+        var esportes = [];
+        document.write('<br>');
+        esportes[0] = 'futebol';
+        esportes[1] = 'basquete';
+        esportes[2] = 'natação';
+        document.write(esportes + '<br>');
+    </script>
+</body>
+</html>

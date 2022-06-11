@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS jQuery 3</title>
+    <script src="jQuery.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+    <form id="cadastro">
+        Nome:<input type="text" id="nome" value=""><br>
+        E-mail:<input type="text" id="email" value=""><br>
+        Endereço:<input type="text" id="endereco" value=""><br>
+        <br>
+        <button>Cadastrar</button>
+
+        <script>
+            $('#cadastro').submit(function(ev){
+                ev.preventDefault();
+                
+                var nome = $('#nome').val();
+                $('#nomecad').text(nome);
+
+                var email = $('#email').val();
+                $('#emailcad').text(email);
+                
+                var endereco = $('#endereco').val();
+                $('#enderecocad').text(endereco);
+            })
+
+        </script>
+    </form>
+    <br>
+    <div>Nome: <span id="nomecad"></span></div>
+    <div>E-mail: <span id="emailcad"></span></div>
+    <div>Endereço: <span id="enderecocad"></span></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #182BC2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    padding: 5px;
+    text-align: center;
+    background-color: #160175;
+}
+
+nav a {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 10px;
+    background-color: #313975;
+}
+
+section {
+    background-color: #6878F7;
+    padding: 5px;
+    width: 80%;    
+}
+
+article {
+    color: white;
+    background-color: #0E1A75;
+}
+
+footer {
+    background-color: #182BC2;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font: bold 12pt Tahoma;
+}

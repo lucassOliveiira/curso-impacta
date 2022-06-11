@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+    margin: 20px;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+header  {
+    background-color: cadetblue;
+    text-align: center;
+}
+
+p {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.mano {
+    background-color: white;
+    list-style-type: upper-alpha;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+ul li {
+    background-color: rgb(95, 131, 160);
+    margin: 5px;
+    padding: 5px;
+}
+
+article {
+    padding: 15px;
+}
+
+#cor1 {
+    background-color: red;
+}
+
+#cor2 {
+    background-color: yellow;
+}
+
+#cor3 {
+    background-color: green;
+}
+
+.centraliza {
+    text-align: center;
+    padding: 2px;
+}
+
+footer {
+    background-color: rgb(124, 124, 255);
+}

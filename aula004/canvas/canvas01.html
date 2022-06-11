@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS 01</title>
+</head>
+<body>
+    <canvas id="menucanvas" width="600" height="400" style="border: 1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('menucanvas');
+        var contexto = canvas.getContext('2d');
+
+        contexto.fillRect(50, 50, 200, 300); //x, y, width, height
+
+        contexto.strokeRect(260, 50, 200, 300);
+    </script>
+</body>
+</html>

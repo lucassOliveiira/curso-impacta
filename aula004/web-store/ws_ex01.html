@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS - Emxemplo 1</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        if (typeof(Storage) != 'undefined') { //VERIFICA SE ACEITA WESTORAGE
+            
+            localStorage.setItem('nome', 'Lucas'); //GUARDANDO NO STORAGE
+
+            var name = localStorage.getItem('nome'); //RESGATANDO NO STORAGE
+
+            document.getElementById('result').innerHTML = name;
+
+        } else {
+            document.getElementById('result').innerHTML = 'Desculpe, este browser não aceita Web Storage!';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Gastos</title>
+    <style>
+        body {
+            font: normal 14pt Tahoma;
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 12%;    
+        }
+
+        fieldset {
+            margin: auto;
+            width: 50%;
+        }
+
+        input {
+
+            margin: 5px;
+        }
+
+        button {
+            font: normal 12pt Tahoma;
+            width: 50%;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        div#msg {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="../JQuery/jQuery.js"></script>
+</head>
+<body>
+    <h1>Planilha de Gastos</h1>
+    <form id="formulario" action="">
+        <table>
+            <fieldset>
+                <label for="salario">Salário:</label>
+                <input type="number" size="50" name="salario" id="salario" placeholder="Seu salário">
+                <br>
+                <label for="internet">Internet:</label>
+                <input type="number" size="50" name="internet" id="internet" placeholder="Conta de internet">
+                <br>
+                <label for="luz">Luz:</label>
+                <input type="number" size="50" name="luz" id="luz" placeholder="Conta de luz">
+                <br>
+                <label for="gasolina">Gasolina:</label>
+                <input type="number" size="50" name="gasolina" id="gasolina" placeholder="Gasolina">
+                <br>
+                <label for="saldo">Saldo:</label>
+                <input type="number" size="50" name="saldo" id="saldo" placeholder="Saldo final">
+                <br>
+                <button type="button" onclick="clicar()">VERIFICAR</button>
+                <div id="msg">Mensagem: </div>
+            </fieldset>
+        </table>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>

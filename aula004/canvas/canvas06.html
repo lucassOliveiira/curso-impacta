@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Background Image</title>
+</head>
+<body>
+    <canvas id="meucanvas" width="600" height="600" style="border: 1px solid black;"></canvas>
+    <script>
+        var canvas = document.getElementById('meucanvas');
+        var ctx = canvas.getContext('2d');
+        var image = new Image();
+        image.src = 'foto-ave.jpg';
+
+        image.onload = function() {
+            var sourceX = 0;
+            var sourceY = 0;
+            var sourceW = 400;
+            var sourceH = 400;
+
+            var finalW = sourceW;
+            var finalH = sourceH;
+
+            var destX = canvas.width / 2 - finalW / 2;
+            var destY = canvas.height / 2 - finalH / 2;
+
+            ctx.drawImage(image, sourceX, sourceY, sourceW, sourceH, destX, destY, finalW, finalH);
+        }
+    </script>
+</body>
+</html>

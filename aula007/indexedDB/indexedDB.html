@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>IdexedDB</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function () {
+            // PREPARANDO O ESPAÇO PARA O BANCO DE DADOS (BD) CONFORME O BROWSER
+            window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+            // CRIANDO VARIÁVEIS PARA MANIPULAR O 'BD'
+            var request, db;
+            if (!window.indexedDB) {
+                console.log('Não suporta IndexedDB!');
+            } else {
+                request = window.indexedDB.open('Teste', 2);
+                request.onerror = function (event) {
+                    console.log('Erro ao abrir o BD!', event);
+                }
+                // VERIFICAR E ATUALIZAR O SISTEMA
+                request.onupgradeneeded = function (event) {
+                    console.log('Atualizando....');
+                    db = event.target.result;
+                    // CRIAR UM OBJETO COMFORME SOLICITADO E SUA CHAVE PRINCIPAL   
+                    var objectStore = db.createObjectStore('estudantes', { keyPath: 'chave' });
+                };
+                // HAVENDO SUCESSO O 'BD' ESTARÁ PRONTO PARA USO
+                request.onsuccess = function (event) {
+                    console.log('Banco de Dados Aberto com SUCESSO!');
+                    db = event.target.result;
+                }
+            }
+            // Ler o formulário e manipular o BD conforme cada BOTÃO/COMANDO
+            $('#addBtn').click(function () {
+                // pegar os valores do formulário
+                var valor = $('#valor').val();
+                var chave = $('#chave').val();
+
+                // iniciar uma transação com o BD
+                var transaction = db.transaction(['estudantes'], 'readwrite');
+                transaction.oncomplete = function (event) {
+                    console.log('Sucesso na transação!');
+                    $('#resultado').html('Adicionado com Sucesso!');
+                }
+                // exibir ERRRO caso não consiga liberar a adição
+                transaction.onerror = function (event) {
+                    console.log('Erro ao adicionar a transação...');
+                    $('#resultado').html('Erro ao adicionar a transação!')
+                };
+                // ADICIONAR - no Objeto - estudantes
+                var objectStore = transaction.objectStore('estudantes');
+                objectStore.add({ chave: chave, valor: valor });
+                // add comando para adicionar um obj
+            });
+            // ALTERAR dados no BD por meio daa CHAVE
+            $('#updateBtn').click(function () {
+                var chave = $('#chave').val();
+                var valor = $('#valor').val();
+
+                var transaction = db.transaction(['estudantes'], 'readwrite');
+                var objectStore = transaction.objectStore('estudantes');
+                var request = objectStore.get(chave);
+                request.onsuccess = function (event) {
+                    $('#resultado').html('Atualizado de: ' + request.result.valor + ' para ' + valor);
+
+                    request.result.valor = valor;
+                    objectStore.put(request.result); // put - ATUALIZAR
+                };
+            });
+            // localizar pela chave um elemento dentro do BD
+            $('#getBtn').click(function () {
+                var chave = $('#chave').val();
+                var request = db.transaction(['estudantes'], 'readwrite').objectStore('estudantes').get(chave); // get = pegar
+                request.onsuccess = function(event) {
+                    $('#resultado').html('Valor: ' + request.result.valor);
+                }
+            });
+            // REMOVER UMA CHAVE
+            $('#removeBtn').click(function(){
+                var chave = $('#chave').val();
+
+                var request = db.transaction(['estudantes'], 'readwrite').objectStore('estudantes').delete(chave);
+                request.onsuccess = function(event) {
+                    $('#resultado').html('Valor REMOVIDO!');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <div class="form">
+            <label for="chave">Chave:</label>
+            <input type="text" name="chave" id="chave">
+        </div>
+        <div class="form">
+            <label for="valor">Valor:</label>
+            <input type="text" name="valor" id="valor">
+        </div>
+        <div>
+            <input class="button" type="button" name="addBtn" id="addBtn" value="Adicionar">
+            <input class="button" type="button" name="updateBtn" id="updateBtn" value="Atualizar">
+            <input class="button" type="button" name="getBtn" id="getBtn" value="Localizar">
+            <input class="button" type="button" name="removeBtn" id="removeBtn" value="Remover">
+        </div>
+    </form>
+    <div id="resultado"></div>
+</body>
+
+</html>

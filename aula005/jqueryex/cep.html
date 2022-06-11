@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEP com API</title>
+</head>
+
+<body>
+    <h1>Consulte o CEP</h1>
+    <form id="buscar">
+        <table>
+            <tr>
+                <td>CEP:</td>
+                <td><input type="text" id="cep" autofocus placeholder="Seu CEP"></td>
+            </tr>
+            <tr>
+                <td>Rua:</td>
+                <td><input type="text" id="logradouro" placeholder="Sua eua"></td>
+            </tr>
+            <tr>
+                <td>Número:</td>
+                <td><input type="number" id="numero" placeholder="Número"></td>
+            </tr>
+            <tr>
+                <td>Complemento:</td>
+                <td><input type="text" id="complemento" placeholder="Complemento"></td>
+            </tr>
+            <tr>
+                <td>Bairro:</td>
+                <td><input type="text" id="bairro" placeholder="Bairro"></td>
+            </tr>
+            <tr>
+                <td>Cidade:</td>
+                <td><input type="text" id="cidade" placeholder="Cidade ex: Guarulhos"></td>
+            </tr>
+            <tr>
+                <td>Estado:</td>
+                <td><input type="text" id="estado" placeholder="Estado"></td>
+            </tr>
+        </table>
+        <button type="submit">Procurar CEP</button>
+    </form>
+    <script src="../jquery/jQuery.js"></script>
+    <script src="cep.js"></script>
+</body>
+
+</html>

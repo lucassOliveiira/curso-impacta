@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Animação</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="desenho" width="900" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById('desenho');
+        var ctx = canvas.getContext('2d');
+
+        var py = 50;
+        var px = 50;
+
+        var velocidade = 0;
+        var aceleracao = 0.05;
+
+        setInterval(draw, 60 / 1000);
+
+        function fisica() {
+            velocidade += aceleracao;
+            py += velocidade;
+            px += 1;
+            if (py > 350) {
+                var temp = 0;
+                temp = velocidade / 1.2
+                velocidade = -temp;
+                py = 350;
+            }
+        }
+        function draw() {
+            fisica();
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(px, py, 40, -1, Math.PI * 2);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            ctx.closePath();
+        }
+    </script>
+</body>
+</html>

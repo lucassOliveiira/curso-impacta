@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - DADOS ANINHADOS</title>
+    <style>
+        body {font: normal 16pt Tahoma;}
+    </style>
+</head>
+<body>
+    <h1>JSON - DADOS ANINHADOS</h1>
+    <p id="dados"></p>
+    <script>
+        var Aluno, x ='', i;
+        var Aluno = {
+            'nome': 'NhoNho',
+            'idade': 8,
+            'professores': {
+                'prof1': 'Girafales',
+                'prof2': 'Seu Barriga',
+                'prof3': 'Seu Madruga'
+            }
+        }
+
+        delete Aluno.professores.prof3;
+
+        for (i in Aluno.professores) {
+            x += Aluno.professores[i] + '<br>';
+        }
+        document.getElementById('dados').innerHTML = x;
+    </script>
+</body>
+</html>

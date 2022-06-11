@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVS Transform</title>
+    <style>
+        div {
+            float: left;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        #block1 {
+            margin: 30px;
+            background-image: url(image/image02.jpg);
+            transform: rotate(-15deg);
+            -ms-transform: rotate(-15deg);
+            -moz-transform: rotate(-15deg);
+            -webkit-transform: rotate(-15deg);
+            -o-transform: rotate(-15deg);
+            box-shadow: 19px 8px 5px rgba(50, 50, 50, 0.60);
+            -webkit-box-shadow: 19px 8px 8px rgba(50, 50, 50, 0.60);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #block2 {
+            border-radius: 30px;
+            margin: 50px;
+            transform: rotate(30deg);
+            background: linear-gradient(to bottom, yellow, green);
+        }
+
+        #block3 {
+            overflow: auto;
+            background-color: aliceblue;
+        }
+
+        span {
+            background-color: rgb(22, 255, 22);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block1">Anything</div>
+    <div id="block2">Anything</div>
+    <div id="block3">Anything
+        <p>Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Unde, aut. Nihil cupiditate dolore ex
+            veniam quia sequi dolores esse dicta alias tenetur voluptates, officiis, <span>assumenda quam! Impedit dicta
+                ipsa sunt!</span></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut. Nihil cupiditate dolore ex veniam quia
+            sequi dolores esse dicta alias tenetur voluptates, officiis, assumenda quam! Impedit dicta ipsa sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut. Nihil cupiditate dolore ex veniam quia
+            sequi dolores esse dicta alias tenetur voluptates, officiis, assumenda quam! Impedit dicta ipsa sunt!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut. Nihil cupiditate dolore ex veniam quia
+            sequi dolores esse dicta alias tenetur voluptates, officiis, assumenda quam! Impedit dicta ipsa sunt!</p>
+    </div>
+    <!-- <div id="block4">Anything</div> -->
+</body>
+
+</html>

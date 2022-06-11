@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações com CSS</title>
+    <style>
+        div {
+            width: 400px;
+            height: 300px;
+            background-color: green;
+            animation-name: exemplo;
+            animation-duration: 5s;
+
+            -webkit-animation-name: exemplo;
+            -webkit-animation-duration: 5s;
+        }
+
+        @keyframes exemplo {
+            from {
+                background-color: green;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+        @-webkit-keyframes exemplo {
+            from {
+                background-color: green;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

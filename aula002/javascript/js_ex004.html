@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt em JavaScript</title>
+</head>
+<body>
+    <h1>JS - Prompt</h1>
+    <script>
+        var name = prompt('Digite seu nome: ');
+        var num1 = prompt('Digite um número: ');
+        var num2 = prompt('Digite outro número: ');
+
+        var res = num1 * num2;
+        var res2 = Number(num1) + Number(num2);
+        console.log(res2)
+
+        document.write(`Olá ${name}, A multiplicação dos números é igual a: ${res}`)
+    </script>
+</body>
+</html>

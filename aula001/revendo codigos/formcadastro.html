@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 01</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <main>
+        <p id="vaga">Quais vagas você procura?</p>
+        <form action="" name="form" id="form">
+            <fieldset>
+                <legend>FORMULÁRIO</legend>
+                <br>
+                <div>
+                    <label for="cargo">Cargo desejado</label>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name="cargo" id="cargo" size="80" placeholder="Cargo desejado" minlength="4" autofocus required>
+                </div>
+                <br>
+                <div>
+                    <label for="salario">Qual a sua pretenção salarial?</label>
+                </div>
+                <br>
+                <div>
+                    <select name="salario" id="salario">
+                        <option value="">Pretenção salarial</option>
+                        <option value="">Até R$ 1000,00</option>
+                        <option value="">A partir de R$ 1000,00</option>
+                        <option value="">A partir de R$ 2000,00</option>
+                        <option value="">A partir de R$ 4000,00</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="regiao">Em qual região deseja trabalhar?</label>
+                </div>
+                <br>
+                <div>
+                    <select name="regiao" id="regiao">
+                        <option value="">Escolha seu estado</option>
+                        <option value="11">São Paulo</option>
+                        <option value="21">Rio de Janeiro</option>
+                        <option value="31">Minas Gerais</option>
+                        <option value="27">Espírito Santos</option>
+                        <option value="51">Rio Grande do Sul</option>
+                        <option value="41">Paraná</option>
+                        <option value="47">Santa Catarina</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="cidade">E qual cidade?</label>
+                </div>
+                <br>
+                <div>
+                    <input type="text" name="cidade" id="cidade" size="80" placeholder="Sua cidade" autofocus>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" name="check[]" id="check">
+                    <label for="check">Sou Pessoa com Deficiência (PCD)</label>
+                </div>
+                <br>
+                <div>
+                    <p>Ao clicar em Cadastrar você declara que leu e aceita os<br> <a href="#">termos e condições de uso</a> do Lucas</p>
+                </div>
+                <br>
+                <button id="botao">CADASTRAR</button>
+            </fieldset>
+        </form>
+    </main>
+    <script>
+        /*
+        var clique = document.getElementById('botao')
+        clique.addEventListener('click', validar)
+        clique.addEventListener('click', clicar)
+        function validar() {
+            var carg = form.cargo;
+            if (cargo.value == "") {
+                alert("Cargo não informado!");
+            }
+            cargo.focus();
+        }
+
+        function clicar() {
+            window.alert('Obrigado por se cadastrar! Você já pode continuar sua navegação')
+        }
+        */
+    </script>
+</body>
+
+</html>

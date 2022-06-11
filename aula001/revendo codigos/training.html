@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 01</title>
+    <style>
+        body {
+            font-family: Tahoma, Verdana, sans-serif;
+            font-size: 14pt;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Formulários</h1>
+        <form action="qualquer.js">
+            <fieldset>
+                <legend>Formulário Teste</legend>
+                <br>
+                <div id="name">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" minlength="5" required>
+                </div>
+                <br>
+                <div id="mail">
+                    <label for="email">E-mail:<label>
+                            <input type="email" name="email" id="email" placeholder="E-mail" required>
+                </div>
+                <br>
+                <div id="password">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" minlength="6" required>
+                </div>
+                <br>
+                <div>
+                    <label for="estado">Seu Estado:</label>
+                    <select name="estado" id="estado">
+                        <option value="">Escolha seu estado
+                        <option>
+                        <option value="35" selected>SP</option>
+                        <option value="22">RJ</option>
+                        <option value="31">MG</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="feedback">Deixe aqui seu feedback:</label>
+                </div>
+                <div>
+                    <textarea name="feedback" id="feedback" cols="19" rows="10"></textarea>
+                </div>
+                <br>
+                <div>
+                    <label for="">Está gostando?</label>
+                </div>
+                <div>
+                    <label for="SIM"><strong>SIM</strong></label>
+                    <input type="radio" value="sim" id="sim" name="escolha">
+                    <label for="NAO"><strong>NÃO</strong></label>
+                    <input type="radio" value="nao" id="nao" name="escolha">
+                </div>
+                <br>
+                <div>
+                    <label for="">Quais os seus esportes favoritos?</label>
+                </div>
+                <br>
+                <div class="check">
+                    <label for="">Futebol</label>
+                    <input type="checkbox" value="futebol" name="escolha[]" id="futebol">
+                </div>
+                <div class="check">
+                    <label for="">Basquete</label>
+                    <input type="checkbox" value="basquete" id="basquete" name="escolha[]">
+                </div>
+                <div class="check">
+                    <label for="">Skate</label>
+                    <input type="checkbox" name="escolha[]" id="skate" value="skate">
+                </div>
+                <br>
+                <div>
+                    <button value="">CADASTRAR</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

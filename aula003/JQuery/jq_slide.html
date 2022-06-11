@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ SLIDE</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+    <button class="btn1">Slide UP</button>
+    <button class="btn2">Slide DOWN</button>
+    <button class="btn3">Slide TOGGLE</button>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aut at reprehenderit nobis aspernatur, amet beatae maiores architecto! Ducimus id, suscipit tempora nisi eum excepturi repellendus rem vel? Ea, optio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, recusandae! Exercitationem repudiandae modi aut dolorum iusto laboriosam recusandae, deserunt totam, culpa quidem magni in porro adipisci tempora necessitatibus fuga tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolorem, dolores dolor iure veritatis tenetur! Numquam velit aperiam, a asperiores ullam, vero nihil magni officia deleniti debitis veritatis reiciendis repellendus.
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.btn1').click(function(){
+                $('div').slideUp();
+            });
+            
+            $('.btn2').click(function(){
+                $('div').slideDown();
+            });
+
+            $('.btn3').click(function(){
+                $('div').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <script src="anima.js"></script>
+    <title>JQ Anima</title>
+    <style>
+        #box {
+            border: 1px solid #38230e;
+            height: 200px;
+            width: 600px;
+            position: relative;
+            left: 10px;
+            top: 10px;
+            overflow: hidden;
+        }
+        #earth {
+            background-color: #523723;
+            border-top: 20px solid #090;
+            height: 50px;
+            width: 600px;
+            position: absolute;
+            bottom: 0;           
+        }
+        #bola1, 
+        #bola2 {
+            border-radius: 30px;
+            height: 50px;
+            position: absolute;
+            top: 80px;
+            width: 50px;
+        }
+        #bola1 {
+            background-color: deepskyblue;
+            left: -40px;
+        }
+        #bola2 {
+            background-color: hotpink;
+            left: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="bola1"></div>
+        <div id="bola2"></div>
+        <div id="earth"></div>
+    </div>
+</body>
+</html>

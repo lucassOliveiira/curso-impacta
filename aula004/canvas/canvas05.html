@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Background Image</title>
+</head>
+<body onload="back()">
+    <canvas id="meucanvas"></canvas>
+    <script>
+        function back() {
+            var canvas = document.getElementById('meucanvas');
+            var ctx = canvas.getContext('2d');
+
+            //IMAGEM DE FUNDO
+
+                // CANVAS DO TAMANHO DA JANELA
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+                //CARREGUEI UMA IMAGEM NESSA VARIAVEL
+            var backg = new Image();
+            backg.src = 'foto-ave.jpg';
+
+                //QUANDO A TELA FOR CARREGADA VAI PREENCHER A TELA COM A IMAGEM - repeat
+            backg.onload = function() {
+                var ptrn = ctx.createPattern(backg, 'repeat');
+                ctx.fillStyle = ptrn;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+    </script>
+</body>
+</html>

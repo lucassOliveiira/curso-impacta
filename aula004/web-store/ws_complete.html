@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS - COMPLETE</title>
+    <script>
+        function adicionar() {
+            localStorage.setItem(txtChave.value, txtValor.value);
+            //txtChave.value = txtValor.value = '';
+        }
+
+        function ler() {
+            var obj = localStorage.getItem(txtChave.value);
+            if (obj != null) {
+                alert(obj); // SE EXISTIR
+            } else {
+                alert('Este item não existe!'); // SE NÃO EXISTIR
+            }
+            //txtChave.value = '';
+        }
+
+        function remover() {
+            localStorage.removeItem(txtChave.value);
+            alert('Item Removido!')
+        }
+
+        function limpar() {
+            localStorage.clear();
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        Chaves:
+        <input type="text" name="txtChave" id="txtChave" required>
+        Valor:
+        <input type="text" name="txtValor" id="txtValor">
+        <hr />
+        <button id="btnAdd" onclick="adicionar()">Adicionar um Item</button>
+        <button id="btnLer" onclick="ler()">Ler um Item</button>
+        <button id="btnRemover" onclick="remover()">Remover um Item</button>
+    </form>
+    <button id="btnLimpar" onclick="limpar()">Remover Todos</button>
+</body>
+</html>

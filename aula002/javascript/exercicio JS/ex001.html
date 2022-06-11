@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando Média</title>
+    <style>
+        body {
+            font-family: Tahoma;
+            text-align: center;
+        }
+        button#botao {
+            width: 50%;
+            height: 50px;
+            font-size: 16pt;
+            margin-bottom: 15px;
+        }
+
+        div#resultado {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando Média</h1>
+    <button id="botao" onclick="clicar()">CALCULAR</button>
+    <div id="resultado">Clique no botão acima para calcular</div>
+    <script>
+        //exercicio: colocar 3 valores e calcurar a média e escrever se foi ou não aprovado não pode nota > 10 e < 0, 
+        var btn = document.getElementById('botao')
+        var res = document.getElementById('resultado')
+        function clicar() {
+            var valor1 = parseFloat(window.prompt('Digite a sua primeira nota: '));
+
+            var valor2 = parseFloat(window.prompt('Digite a sua segunda nota: '));
+
+            var valor3 = parseFloat(window.prompt('Digite a sua terceira nota: '));
+
+            var soma = Number(valor1 + valor2 + valor3) / 3;
+
+            if (soma < 7) {
+                res.innerHTML = `<h3>A média do aluno foi: ${soma.toFixed(2)}</h3>`
+                res.innerHTML += ('VOCÊ FOI REPROVADO!');
+                
+            } else if ((valor1 || valor2 || valor3) > 10 || (valor1 || valor2 || valor3) < 0){
+                res.innerHTML = ('<h2>VALOR NÃO ACEITO! INSIRA UM VALOR CORRETO!</h2>');
+                cor.style.color = 'red'
+            } else {
+                res.innerHTML = `<h3>A média do aluno foi: ${soma.toFixed(2)}</h3>`
+                res.innerHTML += ('VOCÊ FOI APROVADO!');
+            }
+         }
+
+    </script>
+</body>
+
+</html>

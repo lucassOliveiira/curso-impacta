@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários - Parte I</title>
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+    <h2>Formulario com recursos básicos</h2>
+    <form>
+        Nome: <input type="text" size="40" maxlength="41" minlength="5" required><br>
+        Endereço: <input type="text" size="40" maxlength="41" minlength="5"><br>
+        E-mail: <input type="email" size="40" maxlength="41" required><br>
+        Idade: <input type="number" size="3" maxlength="41"><br>
+        Data de Nascimento: <input type="date"><br>
+        Senha: <input type="password" maxlength="20" required><br>
+        <button value="ENVIAR">ENVIAR</button>
+    </form>
+
+    <br>
+    <hr>
+    <br>
+
+    <!-- Formaulário bem formatado usando recursos inteligentes -->
+
+    <h2>Formulario com recursos inteligentes!</h2>
+
+    <form id="cad_02" name="cad_02" action="#">
+        <fieldset>
+            <legend>DADOS PESSOAIS</legend>
+            <label for="nome">Nome:</label>
+            <div><input type="text" size="40" name="nome" id="nome" placeholder="Insira seu nome"></div>
+            <label for="endereco">Endereço:</label>
+            <select name="estado" required>
+                <option value="">Escolha seu estado</option>
+                <option value="35" selected>SP</option>
+                <option value="22">RJ</option>
+                <option value="31">MG</option>
+                <option value="45">RS</option>
+            </select>
+            <label Estado:></label>
+            <select name="estado" required></select>
+
+            <div><input type="text" size="40" name="endereco" id="endereco" placeholder="Insira seu Endereço"></div>
+            <label for="cep">CEP:</label>
+            <div><input type="text" name="cep" id="cep" placeholder="11111-111" required></div>
+            <label for="mensagem">Mensagem:</label>
+            <div><textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea></div>
+            <br>
+            <label>Escolha uma Opção:</label>
+            <div>
+                <input type="radio" name="escolha" value="SIM" checked> [ SIM ]
+            </div>
+            <div>
+                <input type="radio" name="escolha" value="não"> [ NÃO ]
+            </div>
+            <label>Preferências:</label>
+            <div>
+                <ul>
+                    <li><input type="checkbox" name="pref[]" value="musica" checked>[ Música ]</li>
+
+                    <li><input type="checkbox" name="pref[]" value="esporte">[ Esporte ]</li>
+
+                    <li><input type="checkbox" name="pref[]" value="cinema">[ Cinema ]</li>
+
+                    <li><input type="checkbox" name="pref[]" value="literatura">[ Literatura ]</li>
+
+                    <li><input type="checkbox" name="pref[]" value="game">[ Game ]</li>
+                </ul>
+                <!--
+                    pref[musica];
+                    pre[musica, game];
+                    pref[musica, esporte, cinema, literatura, game];
+                -->
+            </div>
+            <input type="button" value="ENVIAR">
+        </fieldset>
+    </form>
+</body>
+
+</html>

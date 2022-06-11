@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Hover</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        div {
+            float: left;
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            overflow: hidden;
+            transition: width 3s, height 3s, transform 2s;
+        }
+
+        div:hover {
+            width: 400px;
+            height: 350px;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: red;">
+        <img src="image/image01.jpg" alt="Imagem 1" width="100%">
+    </div>
+    <div style="background-color: blue;">
+        <img src="image/image02.jpg" alt="Imagem 1" width="100%">
+    </div>
+    <div style="background-color: green;">
+        <img src="image/image04.jpg" alt="Imagem 1" width="100%">
+    </div>
+</body>
+</html>
