@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+</head>
+<style>
+    .anima {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: tomato;
+        color: #fff;
+        font-size: 21px;
+        animation: anima 2s infinite;
+    }
+
+    @keyframes anima {
+        0% {
+            background-color: tomato;
+        }
+        50% {
+            background-color: rgb(255, 187, 71);
+        }
+        100% {
+            background-color: tomato;
+        }
+     /* from {
+            background-color: tomato;
+        }
+        to {
+            background-color: rgb(255, 187, 71);
+        } */
+    }
+</style>
+<body>
+    <div class="anima">
+        HTML5 + CSS3
+    </div>
+</body>
+</html>

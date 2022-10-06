@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB</title>
+</head>
+<body>
+    
+    <script>
+        let db // referência ao banco de dados
+        let requisicao = indexedDB.open('bancoDB')
+
+        requisicao.onsuccess = function(evento) {
+            db = evento.target.result
+        }
+
+        requisicao.onerror = function(evento){
+            alert(`Erro ${evento.target.errorCode} na abertura do banco`)
+        }
+    </script>
+</body>
+</html>

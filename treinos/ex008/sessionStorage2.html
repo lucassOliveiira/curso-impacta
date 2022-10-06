@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="lista">
+        <li>a</li>
+        <li>b</li>
+    </ul>
+    <script>
+        let lista = document.getElementById('lista')
+        for (let i = 0; i < sessionStorage.length; i++) {
+            lista.innerHTML += '<br/>' + sessionStorage.key(i)
+        }
+        // Para remover um item, usamos a função removeItem
+        //sessionStorage.removeItem('myKey')
+
+        //Para excluir uma sessão
+        //sessionStorage.clear()
+    </script>
+</body>
+</html>

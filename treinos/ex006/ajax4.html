@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div id="conteudo"></div>
+    <input id="botao" type="button" value="Executar Ajax">
+
+    <script>
+        $.ajax({
+            url: 'pagina.aspx',
+            type: 'GET',
+            timeout: 12000,
+            dataType: 'text',
+            data: {
+                nome: formulario.txtnome.value
+            }
+        }).done(function(resp){
+            $('conteudo').text(resp)
+        }).fail(function(){
+            alert('Ocorreu um erro durante a requisição ')
+        }) 
+    </script>
+</body>
+</html>

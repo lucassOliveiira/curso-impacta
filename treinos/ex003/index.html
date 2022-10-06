@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="cep" placeholder="Forneça o cep">
+    <input type="text" name="" id="rua" placeholder="Rua">
+    <input type="text" name="" id="cidade" placeholder="Cidade">
+    <button id="mostrarButton">Mostrar</button>
+
+    <script>
+        let botao = document.getElementById('mostrarButton')
+        botao.addEventListener('click', function(){
+            let cep = document.getElementById('cep').value
+            let url = `https://viacep.com.br/ws/${cep}/json`
+            let resposta = {}
+
+            fetch(url)
+                .then(res => {
+                    let x = res.json()
+                    return x
+                })
+                .then(valor => {
+                    resposta = valor
+                    document.getElementById('rua').value = resposta.logradouro
+                    document.getElementById('cidade').value = resposta.localidade
+                })
+        })
+        /*Neste exemplo, a função 'fetch' foi aplicada usando-se duas chamadas then()
+
+        1. 'fetch' recebe a URL a ser consumida como parâmetro
+
+        2. Quando o resultado da  execução do Web service estiver completado, seu conteúdo é repassado para a primeira função 'then'. A resposta é repassada por meio do parâmetro res
+
+        3. A função 'then' recebe o valor referente á resposta e gera um objeto no formato 'JSON', representado pela variável 'x'
+
+        4. O valor retornado pela prieira chamada 'then' (neste exemplo o x) é passado como parâmetro para a segunda chamada 'then'. Esse valor é recevido por meio do parâmetro 'valor'
+
+        5. O parâmetro 'valor' contém o objeto obtido por meio do consumo do Web service
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB 2</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            ☻ Um banco de dados pode armazenar um ou mais objetos, de forma semelhante a um banco de dados relacional
+
+            ☻ Podemos definir um objeto de armazenamento usando a função 'createObjectStore'
+
+            ☻ Especificamos o objeto a ser armazenado juntamente com uma chave que permitirá sua busca
+        */
+
+        //Neste exemplo, um objeto é criado para armazenar os dados de um usuário. A propriedade 'id' é a chave deste objeto
+        let db // referência ao banco de dados
+        let requisicao = indexedDB.open('bancoDB')
+
+        requisicao.onsuccess = function(evento) {
+            db = evento.target.result
+        }
+
+        requisicao.onerror = function(evento){
+            alert(`Erro ${evento.target.errorCode} na abertura do banco`)
+        }
+
+        let usuario = {
+            id: 1,
+            name: 'Lucas',
+            password: 'Luc@s'
+        }
+        let usuarioStore = db.createObjectStore('usuarios', {keyPath: 'id'})
+
+        let novoUsuario = {
+            id: 2,
+            name: 'Maria',
+            password: 'M@ar1a'
+        }
+        let adiciona = usuarioStore.add(novoUsuario)
+        adiciona.onsuccess = function(e) {
+            //evento para sucesso
+        }
+
+        adiciona.onerror = function(e){
+            //evento para erro
+        }
+
+        // Para alterar um registro existente, usamos a função 'put()'
+        let atualizarUsuario = {
+            id: '2',
+            name: 'Maria',
+            password: 'maRi@'
+        }
+        let atualiza = usuarioStore.put(novoUsuario)
+        atualiza.onsuccess = function(e) {
+            //evento para sucesso
+        }
+
+        atualiza.onerror = function(e){
+            //evento para erro
+        }
+
+        //Para remover um registro, usamos a função 'delete()'
+        let remove = usuarioStore.delete('1')
+        remove.onsuccess = function(e) {
+            //evento para sucesso
+        }
+
+        remove.onerror = function(e){
+            //
+        }
+
+        //Para buscar um registro, usamos a função 'get()'
+        let usuarios
+        let requisicao2 = usuarioStore.get('1')
+        remove.onsuccess = function(e) {
+            //evento para sucesso
+            usuarios = e.target.result
+        }
+
+        remove.onerror = function(e){
+            //
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <script>
+        /*Objetos podem ser criados de duas formas*/
+        // 1
+        var obj1 = new Object()
+        obj1.nome = 'carro'
+        obj1.sobrenome = 'Oliveira'
+        console.log(obj1)
+
+        //2 
+        var obj2 = {nome: 'Lucas', sobrenome: 'Oliveira'}
+        console.log(obj2)
+
+        /*Podemos, também, definir as propriedades: */
+        //1
+        var obj3 = new Object()
+        obj3.data = new Date()
+        console.log(obj3)
+
+        //2 
+        var obj4 = {}   
+        obj4['data'] = new Date()
+        console.log(obj4)
+    </script>
+</body>
+</html>
